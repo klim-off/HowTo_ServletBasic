@@ -1,0 +1,51 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Maybe Created Example Application</display-name>
+
+  <filter>
+    <filter-name>HelloFilter</filter-name>
+    <filter-class>dev.klimov.servlets.HelloFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>HelloFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>dev.klimov.servlets.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>InfoServlet</servlet-name>
+    <servlet-class>dev.klimov.servlets.RequestInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InfoServlet</servlet-name>
+    <url-pattern>/info/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InfoServlet</servlet-name>
+    <url-pattern>/info</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>dev.klimov.servlets.SessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <url-pattern>/session/*</url-pattern>
+  </servlet-mapping>
+</web-app>
